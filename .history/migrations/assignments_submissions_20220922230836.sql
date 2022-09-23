@@ -15,3 +15,4 @@ CREATE TABLE assignment_submissions (
   submission_date DATE
 );
 
+SELECT SUM(assignment_submissions.duration

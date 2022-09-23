@@ -15,3 +15,9 @@ CREATE TABLE assignment_submissions (
   submission_date DATE
 );
 
+SELECT SUM(assignment_submissions.duration) FROM assignment_submissions
+LEFT JOIN assignments
+ON assignment_id=assignments.id
+LEFT JOIN students
+ON student_id = students.id
+WHERE students.name = 'Ibrahim Schimmel';

@@ -15,3 +15,8 @@ CREATE TABLE students (
   end_date DATE,
   cohort_id INTEGER REFERENCES cohorts(id) ON DELETE CASCADE
 );
+
+
+select students.name, students.start_date, cohorts.name, cohorts.startdate 
+FROM students JOIN cohorts
+ON cohort_id = 
