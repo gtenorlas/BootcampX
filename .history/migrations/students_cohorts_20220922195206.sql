@@ -16,5 +16,6 @@ CREATE TABLE students (
   cohort_id INTEGER REFERENCES cohorts(id) ON DELETE CASCADE
 );
 
-SELECT name, email, phone FROM students
-WHERE end_date IS NOT NULL AND github IS NULL;
+SELECT id, name FROM students
+WHERE cohort_id = 5
+WHERE 
